@@ -1,0 +1,370 @@
+/* ===== ANIMATED BACKGROUNDS ===== */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5); }
+  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.8); }
+}
+
+@keyframes neonGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.5), 0 0 40px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(255, 0, 255, 0.8), 0 0 80px rgba(0, 255, 255, 0.5);
+    text-shadow: 0 0 20px rgba(255, 0, 255, 1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* ===== DEFAULT THEME ===== */
+[data-theme="default"] {
+  --bg-primary: #f3f4f6;
+  --bg-secondary: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --accent: #3b82f6;
+  --border: #e5e7eb;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --sidebar-bg: #ffffff;
+  --sidebar-text: #1f2937;
+  --sidebar-hover: #f3f4f6;
+  --sidebar-active: linear-gradient(135deg, #3b82f6, #2563eb);
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  
+  /* Design Variables */
+  --border-radius: 0.75rem;
+  --card-padding: 1.5rem;
+  --button-radius: 0.5rem;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ===== GLASS LIGHT THEME (DARK MODE) ===== */
+[data-theme="glass_light"] {
+  --bg-primary: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  --bg-secondary: rgba(255, 255, 255, 0.05);
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --accent: #8b5cf6;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: rgba(0, 0, 0, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --sidebar-bg: rgba(255, 255, 255, 0.1);
+  --sidebar-text: #f3f4f6;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+  --sidebar-active: linear-gradient(135deg, rgba(139, 92, 246, 0.8), rgba(124, 58, 237, 0.8));
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  
+  /* Design Variables - Sleek & Minimal */
+  --border-radius: 1rem;
+  --card-padding: 1.75rem;
+  --button-radius: 0.75rem;
+  --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 12px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 15px 30px -5px rgba(0, 0, 0, 0.5);
+  
+  font-family: 'Poppins', sans-serif;
+}
+
+[data-theme="glass_light"] body {
+  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* ===== GLASS DARK THEME ===== */
+[data-theme="glass_dark"] {
+  --bg-primary: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  --bg-secondary: rgba(255, 255, 255, 0.05);
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --accent: #8b5cf6;
+  --border: rgba(255, 255, 255, 0.1);
+  --shadow: rgba(0, 0, 0, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --sidebar-bg: rgba(255, 255, 255, 0.1);
+  --sidebar-text: #f3f4f6;
+  --sidebar-hover: rgba(255, 255, 255, 0.15);
+  --sidebar-active: linear-gradient(135deg, rgba(139, 92, 246, 0.8), rgba(124, 58, 237, 0.8));
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  
+  /* Design Variables - Sleek & Minimal */
+  --border-radius: 1rem;
+  --card-padding: 1.75rem;
+  --button-radius: 0.75rem;
+  --shadow-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 6px 12px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 15px 30px -5px rgba(0, 0, 0, 0.5);
+  
+  font-family: 'Roboto', sans-serif;
+}
+
+[data-theme="glass_dark"] body {
+  background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* ===== GLASS CYBERPUNK THEME ===== */
+[data-theme="glass_cyber"] {
+  --bg-primary: linear-gradient(-45deg, #0a0a0a, #1a0033, #330066, #ff00ff);
+  --bg-secondary: rgba(255, 0, 255, 0.1);
+  --text-primary: #00ffff;
+  --text-secondary: #ff00ff;
+  --accent: #ff00ff;
+  --border: rgba(255, 0, 255, 0.3);
+  --shadow: rgba(255, 0, 255, 0.5);
+  --glass-bg: rgba(0, 0, 0, 0.5);
+  --glass-border: rgba(255, 0, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(255, 0, 255, 0.3);
+  --sidebar-bg: rgba(0, 0, 0, 0.6);
+  --sidebar-text: #00ffff;
+  --sidebar-hover: rgba(255, 0, 255, 0.2);
+  --sidebar-active: linear-gradient(135deg, rgba(255, 0, 255, 0.6), rgba(0, 255, 255, 0.6));
+  --card-bg: rgba(0, 0, 0, 0.4);
+  --card-border: rgba(255, 0, 255, 0.4);
+  
+  /* Design Variables - Sharp & Edgy */
+  --border-radius: 0.25rem;
+  --card-padding: 1.5rem;
+  --button-radius: 0.25rem;
+  --shadow-sm: 0 0 10px rgba(255, 0, 255, 0.3);
+  --shadow-md: 0 0 20px rgba(255, 0, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.2);
+  --shadow-lg: 0 0 30px rgba(255, 0, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4);
+  
+  font-family: 'Orbitron', monospace;
+}
+
+[data-theme="glass_cyber"] body {
+  background: linear-gradient(-45deg, #0a0a0a, #1a0033, #330066, #ff00ff);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* ===== GLASS EFFECTS ===== */
+.glass-card {
+  background: var(--card-bg, rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border, rgba(255, 255, 255, 0.2));
+  box-shadow: var(--shadow-lg, 0 8px 32px 0 rgba(31, 38, 135, 0.15));
+  transition: all 0.3s ease;
+  border-radius: var(--border-radius, 1rem);
+  padding: var(--card-padding, 1.5rem);
+}
+
+.glass-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+}
+
+.glass-sidebar {
+  background: var(--sidebar-bg, rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid var(--glass-border, rgba(255, 255, 255, 0.2));
+}
+
+.glass-button {
+  background: var(--glass-bg, rgba(255, 255, 255, 0.1));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.2));
+  transition: all 0.3s ease;
+  border-radius: var(--button-radius, 0.75rem);
+}
+
+.glass-button:hover {
+  background: var(--glass-border, rgba(255, 255, 255, 0.2));
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== NEON GLOW (Cyberpunk) ===== */
+[data-theme="glass_cyber"] .glass-card {
+  box-shadow: var(--shadow-md);
+  border: 2px solid rgba(255, 0, 255, 0.5);
+  border-radius: var(--border-radius);
+  transform: skewY(-0.5deg);
+}
+
+[data-theme="glass_cyber"] .glass-card:hover {
+  box-shadow: var(--shadow-lg);
+  animation: neonGlow 2s ease-in-out infinite;
+  transform: skewY(0deg) translateY(-5px);
+}
+
+[data-theme="glass_cyber"] .glass-sidebar {
+  border-right: 2px solid rgba(255, 0, 255, 0.5);
+  box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+.loading-default {
+  background: linear-gradient(90deg, #3b82f6, #2563eb, #1d4ed8);
+  background-size: 200% 100%;
+  animation: gradientMove 2s ease infinite;
+}
+
+.loading-glass-light {
+  background: linear-gradient(90deg, #8b5cf6, #7c3aed, #6d28d9);
+  background-size: 200% 100%;
+  animation: gradientMove 2s ease infinite;
+}
+
+.loading-glass-dark {
+  background: linear-gradient(90deg, #8b5cf6, #7c3aed, #6d28d9);
+  background-size: 200% 100%;
+  animation: gradientMove 2s ease infinite;
+}
+
+.loading-cyber {
+  background: linear-gradient(90deg, #ff00ff, #00ffff, #ff00ff);
+  background-size: 200% 100%;
+  animation: gradientMove 1.5s ease infinite;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  transition: background 0.5s ease;
+  font-family: var(--font-family, 'Inter', system-ui, sans-serif);
+}
+
+/* ===== TEXT COLORS ===== */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-primary {
+  background-color: var(--bg-primary);
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+
+/* ===== FLOATING ANIMATION ===== */
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ===== SIDEBAR THEME STYLES ===== */
+.sidebar-themed {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+}
+
+.sidebar-item-hover:hover {
+  background: var(--sidebar-hover);
+}
+
+.sidebar-item-active {
+  background: var(--sidebar-active);
+  color: white;
+}
+
+/* ===== CYBERPUNK TEXT GLOW ===== */
+[data-theme="glass_cyber"] h1,
+[data-theme="glass_cyber"] h2,
+[data-theme="glass_cyber"] h3 {
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+[data-theme="glass_cyber"] .text-accent {
+  animation: neonGlow 2s ease-in-out infinite;
+}
+
+[data-theme="glass_cyber"] .text-primary {
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+/* ===== CYBERPUNK BUTTON GLOW ===== */
+[data-theme="glass_cyber"] .glass-button:hover {
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.6), 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+[data-theme="glass_cyber"] .sidebar-item-active {
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+}
+
+/* ===== GLASS LIGHT SLEEK STYLE (DARK) ===== */
+[data-theme="glass_light"] .glass-card {
+  border-left: 3px solid rgba(139, 92, 246, 0.5);
+  transform: scale(1);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+[data-theme="glass_light"] .glass-card:hover {
+  border-left-color: rgba(139, 92, 246, 1);
+  transform: translateX(5px) translateY(-5px);
+}
+
+[data-theme="glass_light"] .sidebar-item-active {
+  border-left: 3px solid #8b5cf6;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* ===== GLASS DARK SLEEK STYLE ===== */
+[data-theme="glass_dark"] .glass-card {
+  border-left: 3px solid rgba(139, 92, 246, 0.5);
+}
+
+[data-theme="glass_dark"] .glass-card:hover {
+  border-left-color: rgba(139, 92, 246, 1);
+  transform: translateX(5px) translateY(-5px);
+}
+
+[data-theme="glass_dark"] .sidebar-item-active {
+  border-left: 3px solid #8b5cf6;
+}
+
+/* ===== DEFAULT CLEAN STYLE ===== */
+[data-theme="default"] .glass-card,
+[data-theme="default"] .bg-white {
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+[data-theme="default"] .glass-card:hover,
+[data-theme="default"] .bg-white:hover {
+  border-bottom-color: #3b82f6;
+}
