@@ -236,7 +236,7 @@ function Login() {
           <div className="relative z-10 text-center">
             <div className="w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 mx-auto flex items-center justify-center">
               <img 
-                src="/Gemini_Generated_Image_y8ny9ry8ny9ry8ny__1_-removebg-preview.png" 
+                src="/Logo_gambar__nya_saja-removebg-preview.png" 
                 alt="Illustration" 
                 className="w-full h-full object-contain drop-shadow-2xl"
               />

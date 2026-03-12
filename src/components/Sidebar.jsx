@@ -105,7 +105,7 @@ function Sidebar() {
         <div className="pt-4 px-4 pb-3 border-b border-theme flex items-center justify-between">
           <div className="flex items-center space-x-3 overflow-hidden min-w-0 flex-1">
             <img
-              src="/logo_mm-removebg-preview.png"
+              src="/Logo_gambar__nya_saja-removebg-preview.png"
               alt="Logo"
               className="w-10 h-10 object-contain flex-shrink-0"
             />

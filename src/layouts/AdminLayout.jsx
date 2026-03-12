@@ -104,7 +104,7 @@ export default function AdminLayout({ children }) {
                     theme === 'glass_cyber' ? 'bg-purple-600' : 'bg-blue-400'
                   }`}></div>
                   <img 
-                    src="/Gemini_Generated_Image_y8ny9ry8ny9ry8ny__1_-removebg-preview.png" 
+                    src="/Logo_gambar__nya_saja-removebg-preview.png" 
                     alt="Loading" 
                     className="w-48 h-48 mx-auto relative z-10 animate-float"
                   />
